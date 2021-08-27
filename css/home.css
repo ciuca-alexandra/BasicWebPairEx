@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(0deg, rgb(255, 123, 0) 60% ,#eee019 100%);
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center; 
+}
+
+::-webkit-scrollbar{
+    width: 0;
+    background: transparent;
+}
+
+.welcome {
+    font-family: 'Modak';
+    font-size: 5vw;
+    display: inline-block;
+    -webkit-text-stroke: 1px black;
+    
+}
+
+#t1 {
+    color: red;
+}
+
+#t2 {
+    color: orange;
+}
+
+#t3 {
+    color: yellow;
+}
+
+#t4 {
+    color: green;
+}
+
+#t5 {
+    color: blue;
+}
+
+#t6 {
+    color: #FF3366;
+}
+
+#t7 {
+    color: purple;
+}
+
+.description{
+    margin-top: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+    color: rgb(49, 49, 49);
+}
