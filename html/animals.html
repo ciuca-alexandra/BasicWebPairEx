@@ -26,7 +26,7 @@
           <div class="name">Husky</div>
         </div>
         <p class="desc">Sunt un husky frumos!</p>
-        <button data-order="adopt-husky">Adopt Me</button>
+        <button data-order="adopt-husky" style="cursor: pointer;">Adopt Me</button>
       </div>
 
       <div class="pet">
@@ -35,7 +35,7 @@
           <div class="name">Cici</div>
         </div>
         <p class="desc">Our famous apple pie</p>
-        <button data-order="adopt-cici">Adopt Me</button>
+        <button data-order="adopt-cici" style="cursor: pointer;">Adopt Me</button>
       </div>
 
       <div class="pet">
@@ -44,7 +44,7 @@
           <div class="name">Ricky</div>
         </div>
         <p class="desc">Our famous apple pie</p>
-        <button data-order="adopt-ricky">Adopt Me</button>
+        <button data-order="adopt-ricky" style="cursor: pointer;">Adopt Me</button>
       </div>
     </section>
 
@@ -55,7 +55,7 @@
           <div class="name">Sushi</div>
         </div>
         <p class="desc">Our famous apple pie</p>
-        <button data-order="adopt-sushi">Adopt Me</button>
+        <button data-order="adopt-sushi" style="cursor: pointer;">Adopt Me</button>
       </div>
 
       <div class="pet">
@@ -64,7 +64,7 @@
           <div class="name">Taco</div>
         </div>
         <p class="desc">Our famous apple pie</p>
-        <button data-order="adopt-taco">Adopt Me</button>
+        <button data-order="adopt-taco" style="cursor: pointer;">Adopt Me</button>
       </div>
 
       <div class="pet">
@@ -73,7 +73,7 @@
           <div class="name">Crush</div>
         </div>
         <p class="desc">Our famous apple pie</p>
-        <button data-order="adopt-crush">Adopt Me</button>
+        <button data-order="adopt-crush" style="cursor: pointer;">Adopt Me</button>
       </div>
     </section>
 
@@ -84,7 +84,7 @@
           <div class="name">Rose & Jack</div>
         </div>
         <p class="desc">Our famous apple pie</p>
-        <button data-order="adopt-rose&jack">Adopt Me</button>
+        <button data-order="adopt-rose&jack" style="cursor: pointer;">Adopt Me</button>
       </div>
 
       <div class="pet">
@@ -93,7 +93,7 @@
           <div class="name">Lola</div>
         </div>
         <p class="desc">Our famous apple pie</p>
-        <button data-order="adopt-lola">Adopt Me</button>
+        <button data-order="adopt-lola" style="cursor: pointer;">Adopt Me</button>
       </div>
 
       <div class="pet">
@@ -102,30 +102,31 @@
           <div class="name">Garfield</div>
         </div>
         <p class="desc">Our famous apple pie</p>
-        <button data-order="adopt-garfield">Adopt Me</button>
+        <button data-order="adopt-garfield" style="cursor: pointer;">Adopt Me</button>
       </div>
     </section>
   </div>
 </body>
 
 <script>
-  window.addEventListener("DOMContentLoaded", function (e) {
-    const adoptButtons = document.querySelector("button[data-order]");
+  window.addEventListener("DOMContentLoaded", function(e) {
+    const orderButtons = document.querySelectorAll("button[data-order]");
 
-    adoptButtons.forEach(function (button) {
-      button.addEventListener("click", function (e) {
+    orderButtons.forEach(function(button) {
+      
+      button.addEventListener("click", function(e) {
         const button = e.currentTarget;
         const container = button.parentNode;
 
-        const pet = {
-          id: (id = button.getAttribute("dat-order")),
+        const order = {
+          id: (id = button.getAttribute("data-order")),
           name: container.querySelector(".name").innerText,
           desc: container.querySelector(".desc").innerText
         };
 
-        //localStorage.setItem("order", JSON.stringify(pet));
+        localStorage.setItem("order", JSON.stringify(order));
 
-        const url = window.location.href.replace("animals.html", "form.html");
+        const url = window.location.href.replace("html/animals.html", "html/form.html");
         window.location.href = url;
       });
     });
