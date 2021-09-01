@@ -4,11 +4,13 @@
 }
 
 body{
-    background: linear-gradient(0deg, rgb(255, 123, 0) 60% ,#eee019 100%);
     width: 100vw;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: center; 
+    text-align: center;
+    background: rgb(140, 180, 58);
+    background: linear-gradient(0deg, rgba(140, 180, 58, 1) 0%, rgba(253, 29, 29, 1) 30%, rgba(252, 176, 69, 1) 100%);
+    overflow: hidden;
 }
 
 ::-webkit-scrollbar{
@@ -16,12 +18,25 @@ body{
     background: transparent;
 }
 
+#header {
+    display: block;
+    position: relative;
+}
+
+#content {
+    display: block;
+    position: relative;
+    height: 100vh;
+    padding: 0 5% 5% 5%;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
 .welcome {
     font-family: 'Modak';
-    font-size: 5vw;
+    font-size: 7vw;
     display: inline-block;
-    -webkit-text-stroke: 1px black;
-    
+    -webkit-text-stroke: 1px black;    
 }
 
 #t1 {
