@@ -72,3 +72,11 @@ p{
 .pet .desc {
     font-size: medium;
 }
+
+.pet button{
+    background-color: #f6aeae;
+    padding: 10px;
+    border: solid 1px #f6aeae;
+    border-radius: 3px;
+    color: #fff;
+}
