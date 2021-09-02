@@ -1,5 +1,5 @@
-$(document).ready(function(){
-    $('#btn_submit').click(function(e){
+$(document).ready(function() {
+    $('#btn_submit').click(function(e) {
 
         var first_name = $('#first-name').val();
         var last_name = $('#last-name').val();
@@ -14,43 +14,33 @@ $(document).ready(function(){
         var rgx_adr = new RegExp('[A-Za-z-0-9*-.,; ]');
         var rgx_code = new RegExp('^[0-9]+$');
 
-        if(!first_name.match(rgx_name)){
+        if (!first_name.match(rgx_name)) {
             alert("Incorrect first name!");
             $("#first-name").focus();
             return false;
         }
 
-        if(!last_name.match(rgx_name)){
+        if (!last_name.match(rgx_name)) {
             alert("Incorrect last name!");
             $("#last-name").focus();
             return false;
-        }
-
-        else if(!email.match(rgx_email)){
+        } else if (!email.match(rgx_email)) {
             alert("Incorrect email address!");
             $("#femail1").focus();
             return false;
-        }
-
-        else if(!phone_number.match(rgx_phone)){
+        } else if (!phone_number.match(rgx_phone)) {
             alert("Incorrect phone number!");
             $("#phone-number").focus();
             return false;
-        }
-
-        else if(!address.match(rgx_adr)){
+        } else if (!address.match(rgx_adr)) {
             alert("Incorrect address!");
             $("#address").focus();
             return false;
-        }
-
-        else if(!postal_code.match(rgx_code)){
+        } else if (!postal_code.match(rgx_code)) {
             alert("Incorrect postal code!");
             $("#postal-code").focus();
             return false;
-        }
-
-        else{
+        } else {
             alert("Thank you! Your application was sent!");
             return true;
         }

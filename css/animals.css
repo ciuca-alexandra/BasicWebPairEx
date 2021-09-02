@@ -1,9 +1,9 @@
-*{
+* {
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     width: 100vw;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
@@ -12,21 +12,21 @@ body{
     overflow: hidden;
 }
 
-p{
+p {
     font-size: 1.2em;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 0;
     background: transparent;
 }
 
-#header{
-    display:block;
+#header {
+    display: block;
     position: relative;
 }
 
-#content{
+#content {
     display: block;
     position: relative;
     height: 100vh;
@@ -42,7 +42,7 @@ p{
 
 .columns-desktop {
     display: flex;
-  }
+}
 
 .pet {
     width: 30%;
@@ -52,27 +52,36 @@ p{
     background: linear-gradient(191deg, rgba(74, 255, 0, 1) 10%, rgba(255, 0, 35, 1) 50%, rgba(219, 213, 0, 1) 100%);
     border: 1px solid black;
     border-radius: 5px;
-  }
+    position: relative;
+}
 
 .pet img {
     width: 100%;
-  }
+    position: block;
+}
 
 .pet .name {
     font-weight: bold;
-    font-size: larger;
-  }
+    font-size: 40px;
+    position: block;
+}
 
 .pet .desc {
     margin-top: 5px;
     margin-left: 5px;
-    font-size: medium;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 25px;
+    text-align: center;
+    opacity: 80%;
+    position: block;
 }
 
-.pet button{
+.pet button {
     background-color: #f6aeae;
     padding: 10px;
     border: solid 1px #f6aeae;
     border-radius: 3px;
     color: #fff;
+    position: block;
 }

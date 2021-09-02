@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", function (e) {
+window.addEventListener("DOMContentLoaded", function(e) {
 
     const adoption = localStorage.getItem("adoption");
     const petAdoption = JSON.parse(adoption);
@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", function (e) {
         adoptionInput.value = adoption;
 
         const img = pet.querySelector("img");
-        img.setAttribute("src", `images/${petAdoption.id}.jpg`);
+        img.setAttribute("src", `../images/${petAdoption.id}.jpg`);
         img.setAttribute("alt", petAdoption.name);
     }
 });

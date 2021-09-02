@@ -42,17 +42,17 @@ body {
 
 .input-group {
     margin-bottom: 20px;
-  }
+}
 
-  .input-group input,
-  .input-group textarea,
-  .input-group select {
+.input-group input,
+.input-group textarea,
+.input-group select {
     padding: 10px;
     border: solid 1px #999;
     border-radius: 2px;
     width: 100%;
-  }
+}
 
-  label {
+label {
     font-weight: 600;
-  }
+}
