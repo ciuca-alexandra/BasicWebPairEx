@@ -2,9 +2,12 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <title>Form</title>
     <link href="../css/styles.css" rel="stylesheet" type="text/css">
     <link href="../css/form.css" rel="stylesheet" type="text/css">
+    <link href="../css/animals.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -16,12 +19,119 @@
     </div>
 
     <div id="content">
-
         <span class="heading">Form Page</span>
 
+        <div class="pet">
+            <img src="" />
+            <div class=".columns-desktop">
+                <div class="name"></div>
+            </div>
+            <p class="desc"></p>
+        </div>
+
+        <form id="form">
+
+            <div class="form-group">
+                <label for="first-name">First name</label>
+                <input type="text" class="form-control" name="first-name" id="first-name" placeholder="First name" required />
+            </div>
+
+            <div class="form-group">
+                <label for="last-name">Last name</label>
+                <input type="text" class="form-control" name="last-name" id="last-name" placeholder="Last name" required />
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required />
+            </div>
+
+            <div class="form-group">
+                <label for="phone-number">Phone number</label>
+                <input type="text" class="form-control" name="phone-number" id="phone-number" placeholder="Phone number" required />
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" name="address" id="address" placeholder="Address" required />
+            </div>
+
+            <div class="form-group">
+                <label for="postal-code">Postal code</label>
+                <input type="text" class="form-control" name="postal-code" id="postal-code" placeholder="Postal code" required />
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Comments</label>
+                <textarea name="comments" class="form-control" id="comments" cols="30" rows="10"></textarea>
+            </div>
+
+           
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group mr" role="group" aria-label="First group">
+                    <input type="reset" class="btn btn-warning" value="Reset" />
+                </div>
+                <div class="btn-group mr" role="group" aria-label="Second group">
+                    <button type="button" class="btn btn-danger" form="form" value="Submit" name="btn_submit" id="btn_submit">Submit</button>
+                </div>
+               
+            </div>
+        </form>
+
+        
     </div>
 
+   
 
+
+    <script type="text/javascript">
+
+        window.addEventListener("DOMContentLoaded", function (e) {
+
+            /*let locationBox = document.querySelector("#location");
+            let location = {
+              latitude: "unknown",
+              longitude: "unknown"
+            };
+    
+            window.navigator.geolocation.getCurrentPosition(
+              function(position) {
+    
+                location = {
+                  latitude: position.coords.latitude,
+                  longitude: position.coords.longitude
+                };
+    
+                locationBox.value = JSON.stringify(location);
+              },
+              function(error) {
+                locationBox.value = JSON.stringify(location);
+              });*/
+
+            const order = localStorage.getItem("order");
+            const petOrder = JSON.parse(order);
+
+            if (order) {
+                const pet = document.querySelector(".pet");
+                const name = pet.querySelector(".name");
+                const desc = pet.querySelector(".desc");
+                const orderInput = document.querySelector("#pet-order");
+
+                name.innerText = petOrder.name;
+                desc.innerText = petOrder.desc;
+
+                orderInput.value = order;
+
+                const img = pet.querySelector("img");
+                img.setAttribute("src", `images/${petOrder.id}.jpg`);
+                img.setAttribute("alt", petOrder.name);
+            }
+        });
+    </script>
+
+
+
+    <script src="../js/validation.js"></script>
 
 </body>
 

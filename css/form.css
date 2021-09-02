@@ -31,7 +31,28 @@ body {
     overflow-y: scroll;
 }
 
+.form {
+    width: 50%;
+}
+
 .heading {
     font-size: 4em;
     font-weight: bold;
 }
+
+.input-group {
+    margin-bottom: 20px;
+  }
+
+  .input-group input,
+  .input-group textarea,
+  .input-group select {
+    padding: 10px;
+    border: solid 1px #999;
+    border-radius: 2px;
+    width: 100%;
+  }
+
+  label {
+    font-weight: 600;
+  }
