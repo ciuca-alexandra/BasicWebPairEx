@@ -16,9 +16,8 @@ p {
     font-size: 1.2em;
 }
 
-::-webkit-scrollbar {
-    width: 0;
-    background: transparent;
+#content::-webkit-scrollbar {
+    display: none;
 }
 
 #header {
@@ -33,6 +32,8 @@ p {
     padding: 1% 5% 5% 5%;
     overflow-x: scroll;
     overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .heading {
@@ -81,7 +82,8 @@ p {
     background-color: #f6aeae;
     padding: 10px;
     border: solid 1px #f6aeae;
-    border-radius: 3px;
-    color: #fff;
+    border-radius: 5px;
+    color: rgb(97, 0, 189);
     position: block;
+    font-size: medium;
 }

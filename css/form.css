@@ -12,9 +12,8 @@ body {
     overflow: hidden;
 }
 
-::-webkit-scrollbar {
-    width: 0;
-    background: transparent;
+#content::-webkit-scrollbar {
+    display: none;
 }
 
 #header {
@@ -29,10 +28,8 @@ body {
     padding: 1% 5% 5% 5%;
     overflow-x: scroll;
     overflow-y: scroll;
-}
-
-.form {
-    width: 50%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .heading {
@@ -55,4 +52,6 @@ body {
 
 label {
     font-weight: 600;
+    font-size: x-large;
+    color: white;
 }

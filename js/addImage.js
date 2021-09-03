@@ -3,7 +3,7 @@ window.addEventListener("DOMContentLoaded", function(e) {
     const adoption = localStorage.getItem("adoption");
     const petAdoption = JSON.parse(adoption);
 
-    if (adoption) {
+    if (petAdoption) {
         const pet = document.querySelector(".pet");
         const name = pet.querySelector(".name");
         const desc = pet.querySelector(".desc");
